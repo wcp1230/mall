@@ -4,19 +4,25 @@
 
 > 基于SpringBoot+MyBatis的电商系统，包括前台商城系统及后台管理系统。
 
-> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！
+> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下,谢谢！
 
-> 或者您可以 "follow" 一下，该项目将持续更新，不断完善功能。
+> 该项目已由`CODING`特别赞助，支持的可以点下赞助商链接，谢谢！
 
-> 项目交流QQ群：[959351312](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
-
-> 如有问题或者好的建议可以在 Issues 中提。
+> 项目交流QQ群：[553018255](http://qm.qq.com/cgi-bin/qm/qr?k=M5Edq2TiJL_ShcOEeYjwcmdGmq4zZrd_)、[959351312(满)](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
 
 > 码云项目地址：[https://gitee.com/macrozheng/mall](https://gitee.com/macrozheng/mall)
 
 ## 前言
 
 `mall`项目致力于打造一个完整的电商系统，采用现阶段流行技术实现。
+
+## 特别赞助商
+
+<p align="left">
+<a href="https://e.coding.net/?utm_source=macrozheng&utm_medium=banner&utm_campaign=march2019" target="_blank">
+  <img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/coding.jpg" width=""/>
+ </a>
+</p>
 
 ## 项目介绍
 
@@ -144,16 +150,16 @@ PicPick | 屏幕取色工具 | https://picpick.app/zh/
 JDK | 1.8 | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 Mysql | 5.7 | https://www.mysql.com/
 Redis | 3.2 | https://redis.io/download
-Elasticsearch | 2.4.6 | https://www.elastic.co/downloads
+Elasticsearch | 6.2.2 | https://www.elastic.co/downloads
 MongoDb | 3.2 | https://www.mongodb.com/download-center
-RabbitMq | 5.25 | http://www.rabbitmq.com/download.html
+RabbitMq | 3.4.1 | http://www.rabbitmq.com/download.html
 nginx | 1.10 | http://nginx.org/en/download.html
 
 ### 搭建步骤
 
 > 本地环境搭建
 
-- 本地安装开发环境中的所有工具并启动，具体参考[deploy-windows.md](document/reference/deploy-windows.md);
+- 本地安装开发环境中的所有工具并启动(只启动mall-admin,仅需安装mysql)，具体参考[deploy-windows.md](document/reference/deploy-windows.md);
 - 克隆源代码到本地，使用IDEA或Eclipse打开，并完成编译;
 - 在mysql中新建mall数据库，导入document/sql下的mall.sql文件；
 - 启动mall-admin项目：直接运行com.macro.mall.MallAdminApplication的main方法即可，
@@ -162,16 +168,20 @@ nginx | 1.10 | http://nginx.org/en/download.html
   接口文档地址：http://localhost:8081/swagger-ui.html;
 - 启动mall-portal项目：直接运行com.macro.mall.portal.MallPortalApplication的main方法即可，
   接口文档地址：http://localhost:8085/swagger-ui.html;
-- 克隆`mall-admin-web`项目，并导入到IDEA中并完成编译[传送门](https://github.com/macrozheng/mall-admin-web);
-- 运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
+- 克隆`mall-admin-web`项目，并导入到IDEA中完成编译[传送门](https://github.com/macrozheng/mall-admin-web);
+- 在IDEA命令行中运行命令：npm install,下载相关依赖;
+- 在IDEA命令行中运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
 - ELK日志收集系统的搭建：参考[elk.md](document/elk/elk.md)。
 
 > docker环境部署
 
 - 在VirtualBox或其他环境中安装CenterOs7.2;
-- 配置本地host:参考[host.txt](document/docker/host.txt),将ip地址改为虚拟机的ip地址;
 - 使用maven构建`mall-admin`、`mall-search`、`mall-portal`的docker镜像，参考[docker.md](document/reference/docker.md)中的使用maven构建Docker镜像;
-- 部署步骤参考[docker-deploy.md](document/docker/docker-deploy.md)进行部署。
+- docker下环境安装及部署请参考[docker-deploy.md](document/docker/docker-deploy.md)。
+
+## 项目相关文档
+
+具体详见wiki:[https://github.com/macrozheng/mall/wiki](https://github.com/macrozheng/mall/wiki)
 
 ## 参考资料
 
@@ -183,9 +193,11 @@ nginx | 1.10 | http://nginx.org/en/download.html
 - [MyBatis从入门到精通](https://book.douban.com/subject/27074809/)
 - [深入浅出MySQL](https://book.douban.com/subject/25817684/)
 - [循序渐进Linux（第2版）](https://book.douban.com/subject/26758194/)
+- [Elasticsearch 权威指南](https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html)
 - [Elasticsearch 技术解析与实战](https://book.douban.com/subject/26967826/)
 - [MongoDB实战(第二版)](https://book.douban.com/subject/27061123/)
 - [Kubernetes权威指南](https://book.douban.com/subject/26902153/)
+- [Pro Git](https://git-scm.com/book/zh/v2)
 
 ## 许可证
 
